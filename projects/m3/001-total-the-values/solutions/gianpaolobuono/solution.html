@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let userChoice = prompt('How old are you?');
+    
+    
+    function recursiveFunc() {
+      alert(userChoice);
+      // let newUserCh = prompt("Enter new value:", userCh);
+      if (userChoice == 0 || userChoice == undefined ) {
+        alert(`You have not inserted a value`);
+      } else {
+        alert(`You are ${userChoice} years old!`);
+      }
+    }
+
+    recursiveFunc();
+    // console.log(recursiveFunc());
+
+
+  </script>
+
+
+</body>
+</html>
