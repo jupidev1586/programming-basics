@@ -18,7 +18,9 @@
         alert(`You have not inserted a value`);
       } else {
         // console.log(userChoice);
-        alert("You are " + (userChoice + recursiveFunc()) + " years old!");
+        let result = userChoice + recursiveFunc();
+        alert("You are " + result + " years old!");
+        return userChoice;
       }
     }
 
