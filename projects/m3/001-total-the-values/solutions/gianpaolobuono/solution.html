@@ -10,15 +10,15 @@
   <script>
 
     let userChoice = prompt('How old are you?');
-
+    
     function recursiveFunc() {
       alert(userChoice);
       // let newUserCh = prompt("Enter new value:", userCh);
       if (userChoice == 0 || userChoice == undefined) {
         alert(`You have not inserted a value`);
       } else {
-        console.log(userChoice);
-        alert("You are " + userChoice + " years old!") *recursiveFunc();
+        // console.log(userChoice);
+        alert("You are " + (userChoice + recursiveFunc()) + " years old!");
       }
     }
 
