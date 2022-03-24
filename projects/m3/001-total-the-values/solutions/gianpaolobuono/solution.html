@@ -7,6 +7,8 @@
   <title>TomorrowDevs - javascript - 001-total-the-values</title>
 </head>
 <body>
+
+
   <script>
 
     // 1. alert con possibilità di input da utente
@@ -14,26 +16,24 @@
     // 3. se l'input è maggiore di 0 > fare addizione di user input e la chiamata della funzione stessa (dovendo ritornare un numero, trasformare le variabili in numero)
     // 4. se l'input è minore di 0 fermare l'iterazione con return 0
 
-
-    
     
     function recursiveFunc() {
       // 1. alert con possibilità di input da utente e memorizzare l'input in una variabile
       const userChoice = prompt('Please insert a number bigger than 0');
-      if (userChoice > 0) {
+      if (userChoice == 0) {
+        // 3. se l'input è uguale di 0 fermare l'iterazione con return 0
+        return 0
+      } else if (userChoice > 0) {
         // 2. se l'input è maggiore di 0, fare addizione di user input e la chiamata della funzione stessa (dovendo ritornare un numero, trasformare le variabili in numero)
         const result = parseInt(userChoice) + parseInt(recursiveFunc());
         console.log(result);
         return result;
-      } else {
-        // 3. se l'input è uguale di 0 fermare l'iterazione con return 0
-        return 0
-      }
+      }  
     }
 
     recursiveFunc();
 
-</script>
+  </script>
 
 
 </body>
