@@ -9,18 +9,25 @@
 <body>
   <script>
 
-    let userChoice = prompt('How old are you?');
+    // 1. alert con possibilità di input da utente
+    // 2. memorizzare l'input in una variabile
+    // 3. se l'input è maggiore di 0 > fare addizione di user input e la chiamata della funzione stessa (dovendo ritornare un numero, trasformare le variabili in numero)
+    // 4. se l'input è minore di 0 fermare l'iterazione con return 0
+
+
+    
     
     function recursiveFunc() {
-      alert(userChoice);
-      // let newUserCh = prompt("Enter new value:", userCh);
-      if (userChoice == 0 || userChoice == undefined) {
-        alert(`You have not inserted a value`);
-      } else {
-        // console.log(userChoice);
-        let result = userChoice + recursiveFunc();
-        alert("You are " + result + " years old!");
+      // 1. alert con possibilità di input da utente e memorizzare l'input in una variabile
+      const userChoice = prompt('Please insert a number bigger than 0');
+      if (userChoice > 0) {
+        // 2. se l'input è maggiore di 0, fare addizione di user input e la chiamata della funzione stessa (dovendo ritornare un numero, trasformare le variabili in numero)
+        const result = parseInt(userChoice) + parseInt(recursiveFunc());
+        console.log(result);
         return result;
+      } else {
+        // 3. se l'input è uguale di 0 fermare l'iterazione con return 0
+        return 0
       }
     }
 
