@@ -23,6 +23,7 @@
     function recFunc() {
       // 1. creare variabile numero con user input.
       const binaryNum = prompt("Enter your number");
+      const convertedNum = binaryNum.toString();
       if (binaryNum == 0) {
         alert(binaryNum);
         console.log(binaryNum);
@@ -39,7 +40,8 @@
         alert('Errore: bisogna inserire un numero maggiore di 0');
       // 4. se il numero invece non rispetta queste condizioni, fare la ricorsione (n) + func().
       } else {
-        const recCall = toString(binaryNum%2) + recFunc();
+        const recCall = (convertedNum%2) + recFunc();
+        // console.log(convertedNum);
         alert(recCall);
         console.log(recCall);
         return recCall;
