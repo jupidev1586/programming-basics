@@ -20,14 +20,15 @@
 
     function recFunc() {
       const userInput = prompt("Enter your number");
+      const binaryNum = toString(userInput);
       if (userInput == 0) {
-        alert(userInput);
-        console.log(userInput);
-        return userInput;
+        alert(binaryNum);
+        console.log(binaryNum);
+        return binaryNum;
       } else if (typeof userInput === 'number' && userInput == 1) {
-        alert(userInput);
-        console.log(userInput);
-        return userInput;
+        alert(binaryNum);
+        console.log(binaryNum);
+        return binaryNum;
       } else {
         const recCall = userInput%2 + recFunc();
         alert(recCall);
@@ -36,6 +37,8 @@
       }
     }
     recFunc();
+
+    
   </script>
 
 
