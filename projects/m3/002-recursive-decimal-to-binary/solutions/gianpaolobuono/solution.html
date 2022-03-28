@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TomorrowDevs - javascript - 001-total-the-values</title>
+</head>
+<body>
+
+
+  <script>
+
+    // 1. creare variabile numero positivo
+    // 2. inserire in condizione funzione ricorsiva nell'if che il numero sia positivo (x > 0)
+    // 3. se il numero invece non rispetta questa condizione, alert con risultato fallito
+    // 4. 
+
+    
+
+    function recFunc() {
+      const userInput = prompt("Enter your number");
+      if (userInput == 0) {
+        alert(userInput);
+        console.log(userInput);
+        return userInput;
+      } else if (typeof userInput === 'number' && userInput == 1) {
+        alert(userInput);
+        console.log(userInput);
+        return userInput;
+      } else {
+        const recCall = userInput%2 + recFunc();
+        alert(recCall);
+        console.log(recCall);
+        return recCall;
+      }
+    }
+    recFunc();
+  </script>
+
+
+</body>
+</html>
