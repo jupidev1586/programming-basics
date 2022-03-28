@@ -11,26 +11,35 @@
 
   <script>
 
-    // 1. creare variabile numero positivo
-    // 2. inserire in condizione funzione ricorsiva nell'if che il numero sia positivo (x > 0)
-    // 3. se il numero invece non rispetta questa condizione, alert con risultato fallito
-    // 4. 
+    // 1. creare variabile numero con user input.
+    // 2. inserire in condizione funzione ricorsiva nell'if che il valorer inserito si di tipo numero
+    //    e sia positivo (typeof n === 'number' && n > 0).
+    // 3. se il numero non rispetta queste condizioni e quindi risulta (typeof binaryNum != 'number' && binaryNum != 1), initial-scale=1.0
+    //    messaggio di errore.
+    // 4. se il numero invece non rispetta queste condizioni, fare la ricorsione (n) + func().
 
     
 
     function recFunc() {
-      const userInput = prompt("Enter your number");
-      const binaryNum = toString(userInput);
-      if (userInput == 0) {
+      // 1. creare variabile numero con user input.
+      const binaryNum = prompt("Enter your number");
+      if (binaryNum == 0) {
         alert(binaryNum);
         console.log(binaryNum);
         return binaryNum;
-      } else if (typeof userInput === 'number' && userInput == 1) {
+      // 2. inserire in condizione funzione ricorsiva nell'if che il valorer inserito si di tipo numero
+      //    e sia positivo (typeof n === 'number' && n > 0).
+      } else if (typeof binaryNum === 'number' && binaryNum > 1) {
         alert(binaryNum);
         console.log(binaryNum);
         return binaryNum;
+      // 3. se il numero non rispetta queste condizioni e quindi risulta (typeof binaryNum != 'number' && binaryNum <= 1), initial-scale=1.0
+      //    messaggio di errore.
+      } else if (typeof binaryNum != 'number' && binaryNum <= 1) {
+        alert('Errore: bisogna inserire un numero maggiore di 0');
+      // 4. se il numero invece non rispetta queste condizioni, fare la ricorsione (n) + func().
       } else {
-        const recCall = userInput%2 + recFunc();
+        const recCall = toString(binaryNum%2) + recFunc();
         alert(recCall);
         console.log(recCall);
         return recCall;
