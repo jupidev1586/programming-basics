@@ -19,35 +19,34 @@
     // 4. se il numero invece non rispetta queste condizioni, fare la ricorsione (n) + func().
 
     
-
-    function recFunc() {
-      // 1. creare variabile numero con user input.
-      const binaryNum = prompt("Enter your number");
-      const convertedNum = binaryNum.toString();
-      if (binaryNum == 0) {
-        alert(binaryNum);
+    // 1. creare variabile numero con user input.
+    const initialNum = prompt("Enter your number");
+    
+    function recFunc(binaryNum) {
+      console.log(binaryNum);
+      if (binaryNum == 0 || binaryNum == 1) {
+        // alert(binaryNum);
         console.log(binaryNum);
         return binaryNum;
       // 2. inserire in condizione funzione ricorsiva nell'if che il valorer inserito si di tipo numero
       //    e sia positivo (typeof n === 'number' && n > 0).
-      } else if (typeof binaryNum === 'number' && binaryNum > 0 ) {
-        alert(binaryNum);
-        console.log(binaryNum);
-        return binaryNum;
-      // 3. se il numero non rispetta queste condizioni e quindi risulta (typeof binaryNum != 'number' && binaryNum <= 1), initial-scale=1.0
-      //    messaggio di errore.
       } else if (typeof binaryNum != 'number' && binaryNum < 0) {
         alert('Errore: bisogna inserire un numero maggiore o uguale a 0');
+        return 0;
       // 4. se il numero invece non rispetta queste condizioni, fare la ricorsione (n) + func().
       } else {
-        const recCall = (convertedNum%2) + recFunc();
-        // console.log(convertedNum);
-        alert(recCall);
-        console.log(recCall);
-        return recCall;
-      }
+        const funct = res => res;
+        let result = binaryNum%2;
+        let recCall = recFunc(result);
+        let arrayRecall = [];
+        let resArray = arrayRecall.push(recCall);
+        Object.keys(resArray).forEach(funct);
+        const stringArray = resArray.toString();
+        console.log(stringArray + stringArray);
+        return stringArray;
+      } 
     }
-    recFunc();
+    recFunc(initialNum);
 
     
   </script>
